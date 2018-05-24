@@ -83,7 +83,7 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "NETStandard.Library/2.0.3": {
+      "NETStandard.Library/2.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0"
@@ -436,13 +436,16 @@
         "runtime.json"
       ]
     },
-    "NETStandard.Library/2.0.3": {
-      "sha512": "st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+    "NETStandard.Library/2.0.1": {
+      "sha512": "oA6nwv9MhEKYvLpjZ0ggSpb1g4CQViDVQjLUcDWg598jtvJbpfeP2reqwI1GLW2TbxC/Ml7xL6BBR1HmKPXlTg==",
       "type": "package",
-      "path": "netstandard.library/2.0.3",
+      "path": "netstandard.library/2.0.1",
       "files": [
         "LICENSE.TXT",
+        "NETStandard.Library.2.0.1.nupkg.sha512",
+        "NETStandard.Library.nuspec",
         "THIRD-PARTY-NOTICES.TXT",
+        "build/NETStandard.Library.targets",
         "build/netstandard2.0/NETStandard.Library.targets",
         "build/netstandard2.0/ref/Microsoft.Win32.Primitives.dll",
         "build/netstandard2.0/ref/System.AppContext.dll",
@@ -558,9 +561,7 @@
         "build/netstandard2.0/ref/mscorlib.dll",
         "build/netstandard2.0/ref/netstandard.dll",
         "build/netstandard2.0/ref/netstandard.xml",
-        "lib/netstandard1.0/_._",
-        "netstandard.library.2.0.3.nupkg.sha512",
-        "netstandard.library.nuspec"
+        "lib/netstandard1.0/_._"
       ]
     }
   },
@@ -568,28 +569,31 @@
     ".NETStandard,Version=v2.0": [
       "Microsoft.AspNetCore.Blazor.Browser >= 0.3.0",
       "Microsoft.AspNetCore.Blazor.Build >= 0.3.0",
-      "NETStandard.Library >= 2.0.3"
+      "NETStandard.Library >= 2.0.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lwickenhauser\\.nuget\\packages\\": {},
+    "C:\\Users\\wicki\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lwickenhauser\\source\\repos\\BlazorTest\\BspDataBinding\\BspDataBinding.csproj",
+      "projectUniqueName": "C:\\Users\\wicki\\source\\repos\\blazor\\blazor\\BspDataBinding\\BspDataBinding.csproj",
       "projectName": "BspDataBinding",
-      "projectPath": "C:\\Users\\lwickenhauser\\source\\repos\\BlazorTest\\BspDataBinding\\BspDataBinding.csproj",
-      "packagesPath": "C:\\Users\\lwickenhauser\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lwickenhauser\\source\\repos\\BlazorTest\\BspDataBinding\\obj\\",
+      "projectPath": "C:\\Users\\wicki\\source\\repos\\blazor\\blazor\\BspDataBinding\\BspDataBinding.csproj",
+      "packagesPath": "C:\\Users\\wicki\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\wicki\\source\\repos\\blazor\\blazor\\BspDataBinding\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\lwickenhauser\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\wicki\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
@@ -623,7 +627,7 @@
           "NETStandard.Library": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[2.0.3, )",
+            "version": "[2.0.1, )",
             "autoReferenced": true
           }
         },
