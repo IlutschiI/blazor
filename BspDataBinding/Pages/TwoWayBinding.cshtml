@@ -1,0 +1,35 @@
+﻿@page "/twoWayBinding"
+
+<h1>TwoWayBinding</h1>
+
+<div class="row">
+    <div class="col-md-2">
+        Count: @count
+    </div>    
+    <div class="col-md-2 ">
+        <input bind="@count"/>
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-md-2 ">
+        <button class="btn btn-primary" onclick="@CountUp">Count me!</button>
+    </div>
+</div>
+
+@functions{
+    int count=0;
+
+    private void CountUp()
+    {
+        count++;
+
+    }
+
+    private void onKeyPress()
+    {
+     
+        @Console.WriteLine("###" + count);
+        
+    }
+}
