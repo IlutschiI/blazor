@@ -22,6 +22,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Pages\Features.cshtml" />
+    <None Include="Pages\Pricing\Pricing.cshtml" />
+    <None Include="Pages\Pricing\_ViewImports.cshtml" />
     <None Include="Shared\MainLayout.cshtml" />
     <None Include="Shared\NavBarTop.cshtml" />
   </ItemGroup>
@@ -32,6 +35,30 @@
 
   <ItemGroup>
     <Content Remove="Shared\NavBarTop.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <BlazorGenerate Remove="Pages\Features.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Pages\Features.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <BlazorGenerate Remove="Pages\Pricing\Pricing.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Pages\Pricing\Pricing.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <BlazorGenerate Remove="Pages\Pricing\_ViewImports.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Pages\Pricing\_ViewImports.cshtml" />
   </ItemGroup>
 
 </Project>
