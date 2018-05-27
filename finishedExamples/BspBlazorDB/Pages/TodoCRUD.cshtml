@@ -1,0 +1,49 @@
+﻿@page "/todo"
+@using DataAccess
+@inject TodoContext Context;
+
+<div class="top-row">
+    <h1>Todo</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+        <p >What needs to be done?</p>
+        <input style="display:inline" bind=@newTodo placeholder="Todo..."/>
+    </div>
+    <div class="col-md-3">
+        <button class="btn btn-primary" onclick=@SaveTodo>Save</button>
+    </div>
+
+   
+</div>
+<div class="row">
+    <ul>
+        @foreach (Todo item in todos)
+        {
+            <li>@item.Item</li>
+        }
+    </ul>
+</div>
+
+@functions{
+    private string newTodo;
+
+    private List<Todo> todos;
+
+    protected override Task OnInitAsync()
+    {
+        todos = Context.Todos.ToList();
+        return base.OnInitAsync();
+    }
+
+    private void SaveTodo()
+    {
+        Todo todo = new Todo() {Item=newTodo };
+
+        Context.Todos.Add(todo);
+        Context.SaveChanges();
+        todos = Context.Todos.ToList();
+    }
+
+}

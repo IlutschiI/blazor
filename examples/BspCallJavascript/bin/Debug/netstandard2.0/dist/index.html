@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>BspCallJavascript</title>
+    <base href="/" />
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <app>Loading...</app>
+
+    <script src="_framework/blazor.js" main="BspCallJavascript.dll" entrypoint="BspCallJavascript.Program::Main" references="Microsoft.AspNetCore.Blazor.Browser.dll,Microsoft.AspNetCore.Blazor.dll,Microsoft.Extensions.DependencyInjection.Abstractions.dll,Microsoft.Extensions.DependencyInjection.dll,mscorlib.dll,netstandard.dll,System.Core.dll,System.dll,System.Net.Http.dll" linker-enabled="true"></script>
+    <script>
+        Blazor.registerFunction('say', (data) => {
+            alert(data);
+            return true;
+        });
+
+        function callCSharp(){
+            const assemblyName = 'BspCallJavascript';
+            const namespace = 'BspCallJavascript';
+            const typeName = 'StringUtils';
+            const methodName = 'Concat';
+
+            const concatMethod = Blazor.platform.findMethod(
+                assemblyName,
+                namespace,
+                typeName,
+                methodName
+            );
+
+            let arg1AsDotNetString = Blazor.platform.toDotNetString('Hello ');
+            let arg2AsDotNetString = Blazor.platform.toDotNetString('Blazor ');
+            let arg3AsDotNetString = Blazor.platform.toDotNetString('(from JS)!');
+
+            let resultAsDotNetString = Blazor.platform.callMethod(concatMethod, null, [
+                arg1AsDotNetString,
+                arg2AsDotNetString,
+                arg3AsDotNetString
+            ]);
+
+            let resultAsJavaScriptString = Blazor.platform.toJavaScriptString(resultAsDotNetString);
+
+            alert(resultAsJavaScriptString);
+        }
+    </script>
+</body>
+</html>

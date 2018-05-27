@@ -1,0 +1,27 @@
+﻿
+<div class="row">
+    <div class="col-md-2">
+        <input placeholder="country code..." bind="@countryCode"/>
+    </div>
+    <div class="col-md-9">
+        <input placeholder="phone number..." bind="@phoneNumber"/>
+    </div>
+    <div>
+        @if (phoneNumber.Equals("") || countryCode.Equals(""))
+        {
+            <i class="oi oi-x"></i>
+
+        }
+        else
+        {
+            <i class="oi oi-check"></i>
+
+        }
+    </div>
+</div>
+
+
+@functions{
+    private string countryCode = "";
+    private string phoneNumber = "";
+}
