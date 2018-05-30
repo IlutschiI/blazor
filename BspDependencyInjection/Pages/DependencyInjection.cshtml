@@ -1,0 +1,19 @@
+﻿@page "/inject"
+@inject ICalculator Calculator
+@inject HttpClient http
+
+<div>
+    @res
+</div>
+
+
+@functions{
+
+    int res;
+
+    protected override Task OnInitAsync()
+    {
+        res = Calculator.Add(1, 1);
+        return base.OnInitAsync();
+    }
+}

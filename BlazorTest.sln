@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BspCallJavascript", "BspCal
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BspLayout", "BspLayout\BspLayout.csproj", "{086CAA36-2E43-427D-B9AF-282E1EC335CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BspComponent", "BspComponent\BspComponent.csproj", "{017C04F8-2F00-48B6-8FBA-D5B35E1AF686}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BspComponent", "BspComponent\BspComponent.csproj", "{017C04F8-2F00-48B6-8FBA-D5B35E1AF686}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BspDependencyInjection", "BspDependencyInjection\BspDependencyInjection.csproj", "{44F247EA-C18D-4AED-84A6-DE5B4A9F8332}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{017C04F8-2F00-48B6-8FBA-D5B35E1AF686}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{017C04F8-2F00-48B6-8FBA-D5B35E1AF686}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{017C04F8-2F00-48B6-8FBA-D5B35E1AF686}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44F247EA-C18D-4AED-84A6-DE5B4A9F8332}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44F247EA-C18D-4AED-84A6-DE5B4A9F8332}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44F247EA-C18D-4AED-84A6-DE5B4A9F8332}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44F247EA-C18D-4AED-84A6-DE5B4A9F8332}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
