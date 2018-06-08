@@ -1,0 +1,18 @@
+﻿@page "/"
+@using Microsoft.AspNetCore.Blazor.Browser.Interop
+@using System.Threading
+
+<h1>Awesome Chart</h1>
+
+<canvas id="myChart" width="400" height="400"></canvas>
+
+<button onclick="@DrawGraph">drawGraph</button>
+
+@functions{
+    private void DrawGraph()
+    {
+        RegisteredFunction.Invoke<Boolean>("drawGraph", "");
+    }
+   
+       
+}
